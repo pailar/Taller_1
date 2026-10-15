@@ -124,7 +124,7 @@ Buscar por Descripci&oacute;n: <input type="text"> <input value="Buscar" type="s
 
     <td>
       
-      <form action="editar_linea.html"><input value="Editar L&iacute;nea" type="submit"></form>
+      <form action="editar_linea.html" target="popup" onsubmit="document.getElementById('popup').showModal()"><input value="Editar L&iacute;nea" type="submit"></form>
 
       
       <form action="editar.html"><input value="Borrar" type="submit"></form>
@@ -200,7 +200,7 @@ Nombre de Objetivo (Verbo + Indicador cuantitativo + Funci&oacute;n + Indicador 
 
     <td>
       
-      <form action="editar_objetivo.html"><input value="Editar Objetivo" type="submit"></form>
+      <form action="editar_objetivo.html" target="popup" onsubmit="document.getElementById('popup').showModal()"><input value="Editar Objetivo" type="submit"></form>
 
       
       <form action="editar.html"><input value="Borrar" type="submit"></form>
@@ -225,7 +225,7 @@ Nombre de Objetivo (Verbo + Indicador cuantitativo + Funci&oacute;n + Indicador 
 
     <td>
       
-      <form action="editar_objetivo.html"><input value="Editar Objetivo" type="submit"></form>
+      <form action="editar_objetivo.html" target="popup" onsubmit="document.getElementById('popup').showModal()"><input value="Editar Objetivo" type="submit"></form>
 
       
       <form action="editar.html"><input value="Borrar" type="submit"></form>
@@ -313,6 +313,16 @@ Nombre de Objetivo (Verbo + Indicador cuantitativo + Funci&oacute;n + Indicador 
   <input value="Cancelar / Volver" type="submit">
 </form>
 
+
+<dialog id="popup" style="padding: 0px;">
+<iframe name="popup" width="620" height="520" frameborder="0"></iframe>
+</dialog>
+
+<script>
+window.addEventListener("message", function(e) {
+  document.getElementById("popup").close();
+});
+</script>
 
 </body>
 </html>
